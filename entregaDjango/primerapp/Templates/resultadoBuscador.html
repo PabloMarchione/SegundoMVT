@@ -1,0 +1,20 @@
+{% extends "..\Templates\fader.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1>Mostrando resultados de busqueda</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<h3>{{ mensaje }}</h3>
+
+{% for jugador in jugadores %}
+
+<h4>{{ jugador.nombre }} {{ jugador.apellido }}-{{ jugador.equipo }}</h4>
+
+{% endfor %}
+
+
+{% endblock %}

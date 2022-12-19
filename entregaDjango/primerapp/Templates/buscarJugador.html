@@ -1,0 +1,20 @@
+{% extends "..\Templates\fader.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1>Buscador de jugadores</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<h3>{{ mensaje }}</h3>
+
+<form action="{% url 'buscar' %}" method="GET">
+
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre del jugador">
+    <input type="submit" value="Iniciar busqueda">
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "..\Templates\fader.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1>Vista de los estadios</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<form action="{% url 'estadioForm' %}" method="POST"> {% csrf_token %}
+    <p>Nombre del Estadio:<input type="text" name="nombre"></p>
+    <p>Apodo del Estadio:<input type="text" name="apodo"></p>
+    <p>Fecha de fundacion:<input type="date" name="fundacion"></p>
+    <input type="submit" value="Guardar datos" />
+</form>
+
+{% endblock %}
